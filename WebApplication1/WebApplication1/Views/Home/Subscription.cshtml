@@ -1,0 +1,98 @@
+﻿@using WebApplication1.Models;
+@model FormViewModel;
+
+
+
+@{
+    ViewData["Title"] = "Subscription Page";
+}
+
+<script src= "/js/Subscription.js"></script>
+<link href="/css/form.css" rel="stylesheet" />
+
+<section class="p-3 p-md-4 p-xl-5">
+    <div class="container">
+        <div class="row">
+            
+            <div class=" bsb-tpl-bg-lotion">
+                <div class="p-3 p-md-4 p-xl-5">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="mb-5">
+                                <h2 class="h3">Subscription</h2>
+                                <h3 class="fs-6 fw-normal text-secondary m-0">Enter your details to Subscribe</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <form asp-action="Submit" asp-controller ="Home" id="Subscription">
+                        <div class="row gy-3 gy-md-4 overflow-hidden">
+                            <div class="col-12">
+                                <label for="firstName" class="form-label">First Name <span class="text-danger">*</span></label>
+                                <input asp-for="FirstName" type="text" class="form-control names" name="firstName" id="firstName" placeholder="First Name"
+                                       pattern="^[A-Za-z]{3,30}$" title="3 to 30 character  "required>
+                                <small  class="form-text">FirstName must be between 3 - 30 characters.</small>
+                            </div>
+                            <div class="col-12">
+                                <label for="lastName" class="form-label">Last Name <span class="text-danger">*</span></label>
+                                <input asp-for="LastName" type="text" class="form-control names" name="lastName" id="lastName" placeholder="Last Name"
+                                       pattern="^[A-Za-z]{3,30}$" title="3 to 30 character" required>
+                                <small  class="form-text">LastName must be between 3 - 30 characters.</small>
+                            </div>
+                            <div class="col-12">
+                                <label for="phoneNumber" class="form-label">Phone Number <span class="text-danger">*</span></label>
+                                <input asp-for="PhoneNumber" type="text" class="form-control" name="phoneNumber" id="phoneNumber"
+                                       placeholder="Phone Number" pattern="^(09)\d{9}$"
+                                title="Phone number starts with 09 and has 11 digits  " br required>
+                                <small  class="form-text">Phone number must be 11 characters & start with "09"</small>
+                            </div>
+                            <div class="col-12">
+                                <label  for="birthDate" class="form-label">Birth Date <span class="text-danger">*</span></label>
+                                <input asp-for="BirthDate" type="date" class="form-control" 
+                                name="birthDate" id="birthDate" placeholder="Birth Date" required>
+                                <small class="form-text">You must be atleast 18</small>
+                            </div>
+                            
+                            <div class="col-12">
+                                <label for="courseCode" class="form-label">Course  Code <span class="text-danger">*</span></label>
+                                <input asp-for="CourseCode" type="text" class="form-control" name="courseCode" id="courseCode" placeholder="Course  Code"
+                                       pattern="^[2468]\d{2}$" title="3 digits number with hundereds divisible by 2" br
+                                required>
+                                <small class="form-text">Course code must be 3 digits and hundereds divisible by 2</small>
+                            </div>
+                            <div class="col-12">
+                                <label for="sex" class="form-label">Sex <span class="text-danger">*</span></label>
+                                <select asp-for= "Sex" name="sex" id="sex">
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </div>
+                           
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" name="iAgree" id="iAgree" required>
+                                    <label class="form-check-label text-secondary" for="iAgree">
+                                        I agree to the <a asp-action="Rules"  asp-controller ="Home" class="link-primary text-decoration-none">terms and conditions</a>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="d-grid">
+                                    <button class="btn bsb-btn-xl btn-primary" type="submit">Sign up</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="row">
+                        <div class="col-12">
+                            <hr class="mt-5 mb-4 border-secondary-subtle">
+                           
+                    </div>
+                    
+            </div>
+        </div>
+    </div>
+ </div>
+  </div>
+</section>
+        
+        
