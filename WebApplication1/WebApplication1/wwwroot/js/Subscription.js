@@ -18,7 +18,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     });
     const date = document.getElementById("birthDate");
     date.addEventListener('change', (e) => {
-        validate(e.target,ValidateDate(this.value));
+        validate(e.target,ValidateDate(e.target.value));
     });
     
 
