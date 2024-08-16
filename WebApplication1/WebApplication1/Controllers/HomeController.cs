@@ -32,7 +32,8 @@ namespace WebApplication1.Controllers
         {
             return View();
         }
-        public IActionResult Submit(FormViewModel form)
+        [HttpGet]
+        public void Submit(FormViewModel form)
         {
 
            
@@ -52,10 +53,10 @@ namespace WebApplication1.Controllers
                         string sForm = JsonSerializer.Serialize(jForm);
                         outputFile.WriteLine(sForm);
                     }
-                    return jForm;
+                    //return jForm;
                 }
             }
-            return View();
+            //return View();
 
         }
 

@@ -1,1 +1,1 @@
-{"ContentType":null,"SerializerSettings":null,"StatusCode":null,"Value":{"FirstName":"das","LastName":"das","PhoneNumber":"09125134364","BirthDate":"2002-07-18","CourseCode":"222","Sex":"Male"}}
+{"ContentType":null,"SerializerSettings":null,"StatusCode":null,"Value":{"FirstName":"parnia","LastName":"minayy","PhoneNumber":"09334445597","BirthDate":"2002-02-22","CourseCode":"243","Sex":"Male"}}
